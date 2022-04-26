@@ -1,0 +1,157 @@
+1. Selecione os campos nome do cliente, endereço e estado de todos os clientes.
+
+select endereco, uf from cliente;
+
+---------------------
+
+2. Liste todos os vendedores.
+
+select * from vendedor;
+
+----------------------
+
+3. Liste os campos código do produto e quantidade da tabela Item do Pedido.
+
+select codigo_produto, quantidade from item_pedido;
+
+------------------------
+
+
+4. Liste o campo “código do cliente” da tabela pedidos e elimine as linhas duplicadas.
+
+select DISTINCT codigo_cliente from pedido;
+
+------------------------
+
+5. Selecione os campos código do produto, descrição do produto e valor unitário e altere a linha de cabeçalho dos campos selecionados.
+
+select codigo_produto, descricao_produto, val_unit from produto;
+
+------------------------
+
+6. Faça uma consulta que mostre o nome do cliente e estado e altere a linha de cabeçalho dos campos selecionados.
+
+
+
+------------------------
+
+7. Quais são as cidades que a empresa possui clientes?
+
+select cidade from cliente;
+
+------------------------
+
+8. Liste da tabela produto o campo Descrição e faça o produto do campo valor unitário por 1,3.
+
+
+select descricao_produto, val_unit = 1,3 from produto;
+
+------------------------
+
+9. Elabore uma consulta que mostre o código do cliente e mostre o prazo de entrega prorrogado por mais 3 dias da tabela pedido.
+
+
+------------------------
+
+10. Liste o nome do vendedor e faixa de comissão dos vendedores que possuem o salário fixo maior que R$ 4.000,00.
+
+select nome_vendedor, faixa_comissao from vendedor where salario_fixo >= 4000;
+
+------------------------
+
+11. Selecione os produtos cuja unidade do produto seja igual a kg.
+
+select * from produto where unidade = 'Kg';
+
+------------------------
+
+12. Faça uma consulta que mostre o nome do cliente e a cidade quando o estado for igual a SP ou cidade igual a Londrina da tabela cliente.
+
+select * from cliente where uf = 'SP' or cidade = 'Londrina';
+
+------------------------
+
+13. Elabore uma consulta que mostre o número do pedido e o prazo de entrega dos pedidos que tiverem o código do cliente igual a 720 e o código do vendedor igual a 101.
+
+select num_pedido, prazo_entrega from pedido where codigo_cliente = 720 and codigo_vendedor = 101;
+
+------------------------
+
+14. Selecione da tabela item do pedido o campo número do pedido quando a quantidade for maior igual a 30 e elimine as linhas duplicadas.
+
+select DISTINCT num_pedido from item_pedido where quantidade >= 30;
+
+------------------------
+
+15. Liste todos os vendedores, exceto os que possuem a faixa de comissão igual a ‘C’.
+
+
+select * FROM vendedor where faixa_comissao not in ('C');
+
+------------------------
+
+16. Liste as descrições de todos os produtos, exceto os que possuem a unidade o produto igual a ‘M’.
+
+select * FROM produto where unidade not in ('M');
+
+------------------------
+
+
+17. Crie uma consulta que mostre os nomes dos vendedores que possuem o Salário Fixo na faixa de R$ 1.000,00 até R$ 3.000,00.
+
+select nome_vendedor FROM vendedor where salario_fixo between '1000' and '4000';
+
+-------------------------
+
+
+
+18. Selecione os campos número dos pedidos e prazo de entrega de todos os pedidos que possuem o prazo de entrega que esteja entre 15 a 25 dias.
+
+
+select num_pedido, prazo_entrega FROM pedido where prazo_entrega between '15' and '25';
+
+--------------------------
+
+19. Localizem os registros de vendedores que não comecem com a letra ‘J’.
+
+select * FROM vendedor where nome_vendedor not like 'J%';
+
+-------------------------
+
+20. Localizem os registros de clientes cujos nomes contenham as letras ‘io’.
+
+select * FROM cliente where nome_cliente like '%io%';
+
+--------------------------
+
+21. Selecionem os nomes dos clientes que comecem com letra ‘A’ até a letra ‘F’.
+22. Mostre a descrição dos produtos quando a unidade do produto não seja igual a ‘M’ e ‘Kg’.
+23. Selecionem os vendedores que não possuem a faixa de comissão.
+24. Listem os clientes que possuem Inscrição Estadual, ou seja, Inscrição Estadual não nula.
+25. Crie uma consulta que exiba os clientes ordenados pelo nome do cliente.
+26. Faça uma consulta da tabela vendedor que mostre nome do vendedor e o salário fixo dos
+vendedores ordenados pelo nome do vendedor.
+27. Mostre o nome do cliente e o endereço dos clientes do estado de SP ordenados pelo código do
+cliente.
+28. Selecione o número do pedido dos pedidos que possuem o prazo de entrega igual a 20 dias
+classificado em ordem decrescente pelo número do pedido.
+29. Listem as faixas de comissões, os nomes e os códigos dos vendedores ordenados pela faixa de
+comissão e pelo nome do vendedor.
+30. Realize uma consulta que exiba os estados e os nomes dos clientes que comecem com a letra ‘P’
+até a letra ‘Z’, classificados por estado e nome.
+31. Mostre o produto que possui o menor e o maior preço.
+32. Façam a média e a soma do salário fixo dos vendedores
+1
+33. Encontre a quantidade de clientes que não possuem a Inscrição Estadual nula.
+34. Exiba o maior valor e a soma do salário fixo dos vendedores que possuem a faixa de comissão ‘A’.
+35. Mostre a quantidade total pedida, para o produto ‘papel’ de código ‘77’ na tabela item do pedido.
+36. Quantos produtos possuem um valor unitário menor que R$ 2,00.
+37. Liste a quantidade clientes que cada estado contém.
+38. Exiba a quantidade de vendedores e a soma do salário fixo agrupados pela faixa de comissão.
+39. Mostre a soma do valor unitário da tabela produto, agrupados pela unidade.
+40. Liste a quantidade de pedidos que tem o prazo de entrega maior que 7, agrupados pelo código do
+vendedor.
+41. Exiba a quantidade de clientes que cada estado contém, menos os clientes do estado de SP
+42. Selecione os pedidos que têm mais do que 3 produtos na tabela item do pedido.
+43. Liste da tabela item do pedido os produtos que contenha a soma das quantidades maior igual a 50.
+44. Mostre os produtos cuja média do valor unitário agrupados pela unidade seja menor que R$ 1,50.
